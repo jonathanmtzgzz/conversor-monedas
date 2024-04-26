@@ -12,6 +12,7 @@ public class Principal {
 
         Scanner scanner = new Scanner(System.in);
         ConsultaMoneda consulta = new ConsultaMoneda();
+        String respuesta;
 
         do {
             System.out.println("");
@@ -47,8 +48,8 @@ public class Principal {
             }
 
             System.out.print("¿Desea realizar otra conversión? (S/N): ");
-
-        } while (scanner.nextLine().equals("S") || scanner.nextLine().equals("s"));
+            respuesta = scanner.nextLine();
+        } while (respuesta.equalsIgnoreCase("S"));
 
         System.out.println("");
         System.out.println("** Gracias por utilizar nuestro conversor de monedas. ¡Hasta luego! **");
